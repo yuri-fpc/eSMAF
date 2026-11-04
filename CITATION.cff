@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+title: "eSMAF: Electronic Soil Management Assessment Framework"
+message: >-
+  If you use eSMAF in work you publish, please cite both the software (this
+  file) and the article listed under preferred-citation.
+type: software
+version: 2.0.0
+date-released: 2026-11-04
+license: PolyForm-Noncommercial-1.0.0
+license-url: "https://github.com/yuri-fpc/eSMAF/blob/main/LICENSE.md"
+repository-code: "https://github.com/yuri-fpc/eSMAF"
+# Replace with the DOI Zenodo issues for this release.
+doi: 10.5281/zenodo.XXXXXXX
+abstract: >-
+  A desktop implementation of the Soil Management Assessment Framework (SMAF)
+  that converts soil measurements into indicator, component and soil health
+  index scores. Analytical units are declared rather than inferred, factor
+  classes are chosen explicitly, and every analysis records the software
+  version, the calculation model, the crop database version, the declared units
+  and the factor classes of each site, so that a result can be reproduced and
+  any difference between two assessments attributed to a specific decision.
+keywords:
+  - soil health
+  - SMAF
+  - soil quality index
+  - reproducibility
+  - soil science
+authors:
+  - family-names: Castilho
+    given-names: Yuri Parra
+    email: yuri.castilho@usp.br
+    affiliation: >-
+      Department of Soil Science, Luiz de Queiroz College of Agriculture,
+      University of São Paulo, Piracicaba, Brazil
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Sibulski
+    given-names: Maurício
+    affiliation: >-
+      Polytechnic School, Pontifical Catholic University of Rio Grande do Sul,
+      Porto Alegre, Brazil
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+
+preferred-citation:
+  type: article
+  title: >-
+    eSMAF: an open and reproducible implementation of the Soil Management
+    Assessment Framework as software
+  journal: Smart Agricultural Technology
+  year: 2026
+  # Fill in once the article is accepted.
+  # doi: 10.1016/j.atech.XXXX.XXXXXX
+  authors:
+    - family-names: Castilho
+      given-names: Yuri Parra
+    - family-names: Sibulski
+      given-names: Maurício
+    - family-names: Vieira da Silva
+      given-names: Luis Fernando
+    - family-names: Ferreira
+      given-names: Tiago Osório
+    - family-names: Cherubin
+      given-names: Maurício Roberto
+
+references:
+  - type: article
+    title: The Soil Management Assessment Framework
+    authors:
+      - family-names: Andrews
+        given-names: Susan S.
+      - family-names: Karlen
+        given-names: Douglas L.
+      - family-names: Cambardella
+        given-names: Cynthia A.
+    journal: Soil Science Society of America Journal
+    volume: 68
+    start: 1945
+    end: 1962
+    year: 2004
+    doi: 10.2136/sssaj2004.1945

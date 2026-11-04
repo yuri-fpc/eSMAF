@@ -1,0 +1,54 @@
+{
+  "id": "esmaf-1.0-legacy",
+  "label": "eSMAF 1.0 (web version, bit-compatible)",
+  "derives_from": "esmaf-2.0",
+  "released": "2024",
+  "summary": "Reproduces the numbers produced by the eSMAF website, including the behaviours later identified as defects. It is not offered as a choice in the interface and cannot be used for an analysis: it exists so that the regression tests can show, for each defect, the number the web version returned and the number the current model returns. Reaching it requires calling the core library directly.",
+  "deprecated": true,
+  "comparison_only": true,
+  "texture_classes": 4,
+  "known_defects": [
+    "Texture class 5 is unreachable: clays above 60 % are scored as class 4.",
+    "WFPS is requested as a percentage although the equation expects a fraction, so any value entered in percent scores 0.",
+    "Component scores are not renormalised when an indicator is missing, so an unmeasured indicator lowers the component score.",
+    "Partial indices are multiplied by component weights that do not sum to 1, so they are systematically about a third too low.",
+    "A single missing cell removes the whole indicator column for that crop group.",
+    "The MBC season x climate factors differ from SMAF-QS_2022 without a documented reason.",
+    "The high-EC branch of the SAR curve uses c = 0.012 where SMAF-QS_2022 uses 0.0105.",
+    "SAR branch selection uses the reported EC without converting a 1:1 reading to a saturation-paste basis."
+  ],
+  "switches": {
+    "k_curve": "brazil_iac2022",
+    "wfps_input": "percent_literal",
+    "sar_ec_basis": "as_reported",
+    "renormalise_weights": false,
+    "partial_index_renormalised": false,
+    "missing_data": "drop_column"
+  },
+  "overrides": {
+    "tables": {
+      "SAR": {
+        "high": {"a": 1.0, "b": -0.0702, "c": 0.012, "d": -0.00068, "e": -2.4e-05}
+      },
+      "EC": {
+        "saturation_paste": {"rise_slope": 3.34, "rise_limit": 0.3},
+        "ratio_1_1": {"rise_slope": 5.89, "rise_limit": 0.17, "divisor": 1.77}
+      },
+      "MBC": {
+        "c_organic_matter": {"1": 0.0062097, "2": 0.0124192, "3": 0.0186290, "4": 0.0212898},
+        "c_season_climate_coarse": {
+          "1": 1.0,
+          "2.1": 0.92, "2.2": 0.93, "2.3": 0.94, "2.4": 1.05,
+          "3.1": 1.02, "3.2": 1.025, "3.3": 1.03, "3.4": 1.035,
+          "4.1": 1.12, "4.2": 1.1, "4.3": 1.08, "4.4": 1.06
+        },
+        "c_season_climate": {
+          "1": 1.0,
+          "2.1": 1.08, "2.2": 1.07, "2.3": 1.06, "2.4": 1.05,
+          "3.1": 1.02, "3.2": 1.025, "3.3": 1.03, "3.4": 1.035,
+          "4.1": 1.12, "4.2": 1.1, "4.3": 1.08, "4.4": 1.06
+        }
+      }
+    }
+  }
+}
