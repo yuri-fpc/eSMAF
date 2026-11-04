@@ -163,5 +163,5 @@ Department of Soil Science, Luiz de Queiroz College of Agriculture,
 University of São Paulo, Piracicaba, Brazil
 
 Requests to add a crop to the database are welcome. Salinity thresholds for the
-Brazilian crop entries are the current priority, and electrical conductivity and
+Brazilian crop entries are also welcome, as electrical conductivity and
 sodium adsorption ratio cannot be scored for them until those are available.
