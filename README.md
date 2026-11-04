@@ -154,7 +154,7 @@ release has its own DOI on Zenodo, so you can cite the exact version you ran.
 
 > Castilho, Y.P. & Sibulski, M. (2026). *eSMAF: Electronic Soil Management
 > Assessment Framework* (version 2.0.0) [Computer software].
-> https://doi.org/10.5281/zenodo.XXXXXXX
+> https://doi.org/10.5281/zenodo.23965940
 
 ## Contact
 

@@ -9,8 +9,7 @@ date-released: 2026-11-04
 license: PolyForm-Noncommercial-1.0.0
 license-url: "https://github.com/yuri-fpc/eSMAF/blob/main/LICENSE.md"
 repository-code: "https://github.com/yuri-fpc/eSMAF"
-# Replace with the DOI Zenodo issues for this release.
-doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.23965940
 abstract: >-
   A desktop implementation of the Soil Management Assessment Framework (SMAF)
   that converts soil measurements into indicator, component and soil health
